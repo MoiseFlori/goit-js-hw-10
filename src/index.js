@@ -15,6 +15,7 @@ const catInfo = document.querySelector(".cat-info");
 
 function showLoader() {
   loader.style.display = "block";
+  catInfo.style.display = "none"; 
 }
 function hideLoader() {
   loader.style.display = "none";
@@ -27,6 +28,7 @@ function hideError() {
 }
 function clearCatInfo() {
   catInfo.innerHTML = "";
+  catInfo.style.display = "none"; 
 }
 
 
@@ -71,6 +73,7 @@ function loadCatInfo(breedId) {
           <p><strong>Temperament:</strong> ${temperament}</p>
         `;
         catInfo.innerHTML = catHTML;
+        catInfo.style.display = "flex";
       }
     })
     .catch(() => {
