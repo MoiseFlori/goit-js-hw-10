@@ -1,19 +1,18 @@
 import { fetchBreeds, fetchCatByBreed } from "./cat-api.js";
-// SlimSelect
+
 import SlimSelect from "slim-select";
 import "slim-select/dist/slimselect.css";
 
-// Notiflix
 import Notiflix from "notiflix";
 
 
-// Elemente HTML
+
 const loader = document.querySelector(".loader");
 const error = document.querySelector(".error");
 const breedSelect = document.querySelector(".breed-select");
 const catInfo = document.querySelector(".cat-info");
 
-// Afișarea/ascunderea elementelor
+
 function showLoader() {
   loader.style.display = "block";
 }
@@ -30,7 +29,7 @@ function clearCatInfo() {
   catInfo.innerHTML = "";
 }
 
-// Încarcă lista de rase
+
 function loadBreeds() {
   showLoader();
   hideError();
@@ -54,7 +53,7 @@ function loadBreeds() {
     });
 }
 
-// Încarcă informațiile despre o pisică
+
 function loadCatInfo(breedId) {
   showLoader();
   hideError();
@@ -82,7 +81,7 @@ function loadCatInfo(breedId) {
     });
 }
 
-// Event Listener pentru select
+
 breedSelect.addEventListener("change", (event) => {
   const breedId = event.target.value;
   if (breedId) {
@@ -90,5 +89,5 @@ breedSelect.addEventListener("change", (event) => {
   }
 });
 
-// Inițializează aplicația
+
 loadBreeds();

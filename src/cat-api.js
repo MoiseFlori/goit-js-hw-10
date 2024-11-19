@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.defaults.headers.common["x-api-key"] = "live_a3WZsDh5BK7FOvKeB9kKnvMXofFZfrQPO5iurRly8HYLSRJQ3I9oTEmq8OnAwQlq";
 
-// Funcția pentru obținerea listei de rase
+
 export async function fetchBreeds() {
   try {
     const response = await axios
@@ -14,7 +14,7 @@ export async function fetchBreeds() {
   }
 }
 
-// Funcția pentru obținerea informațiilor despre o rasă
+
 export async function fetchCatByBreed(breedId) {
   try {
     const response = await axios
